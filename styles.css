@@ -1,6 +1,14 @@
-html {
+:root {
+  --void: #000;
+  --bg: #f4db9d;
+  --rust: #b7410e;
+  --text-1: #6b5238;
+  --shadow: #ff9800;
+}
+
+body {
   background-color: #000;
-  color: #6b5238;
+  color: var(--text-1);
 }
 
 .container {
@@ -11,12 +19,12 @@ html {
   justify-items: center;
   text-align: center;
   margin: 0 auto;
-  background-color: rgb(245, 224, 173);
+  background-color: var(--void);
   border-radius: 16px;
-  border: 6px double #b7410e;
+  border: 6px double var(--rust);
 }
 #title-bg {
-  background-color: #000;
+  background-color: var(--void);
   height: 80px;
   width: 80vw;
   margin: 0 auto;
@@ -27,27 +35,29 @@ html {
   font-size: 3rem;
   text-align: center;
   padding-top: 16px;
-  color: rgb(245, 224, 173);
+  color: var(--bg);
   margin: auto;
-  text-shadow: 0 0 16px #ff9800;
+  text-shadow: 2px 6px 16px var(--shadow);
 }
 
 .sub-title {
   font-family: 'Palanquin Dark', sans-serif;
-  margin-left: 32px;
+  margin: 16px auto 16px auto;
+  max-width: 50vw;
+  color: var(--rust);
 }
 
 p {
   text-align: center;
-  max-width: 620px;
+  max-width: 80%;
   font-family: 'Baloo', cursive;
   margin: 0 auto;
 }
 
 img {
   border-radius: 16px;
-  border: 6px double #b7410e;
-  width: 640px;
+  border: 6px double var(--rust);
+  max-width: 80vw;
 }
 
 figcaption {
@@ -57,25 +67,32 @@ figcaption {
 
 a {
   text-decoration: none;
-  color: #ff9800;
+  color: var(--shadow);
 }
 
 a:hover {
-  color: #b7410e;
+  color: var(--rust);
 }
 
 footer {
-  color: rgb(245, 224, 173);
+  color: var(--bg);
   text-align: center;
   font-family: 'Baloo', cursive;
   padding-top: 16px;
 }
 
 hr {
-    margin: 6px 0 6px 0;
+    margin: 16px auto 16px auto;
     height: 6px;
-    background-color: #b7410e;
-    border: 2px ridge #b7410e;
+    background-color: var(--rust);
+    border: 2px ridge var(--rust);
     width: 78%;
-    margin: 0 auto;
+  }
+
+  section {
+    position: relative;
+  }
+
+  em {
+    color: var(--rust);
   }
